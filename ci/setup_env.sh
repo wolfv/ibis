@@ -35,7 +35,7 @@ else
     echo "Running without adding conda to PATH."
 fi
 conda update -n base -c anaconda --all --yes conda
-conda install -c conda-forge mamba
+conda install -c conda-forge mamba --strict-channel-priority
 
 # Add selected Python version and backend dependencies to environment.yml and install
 echo "  - python=${PYTHON_VERSION}" >> environment.yml
