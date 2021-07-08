@@ -53,8 +53,11 @@ for BACKEND in $BACKENDS; do
         fi
     fi
 done
+
+conda list
+
 cat environment.yml
-mamba env update -n base --file=environment.yml
+mamba env update -n base --file=environment.yml -vvv
 python -m pip install -e .
 
 if [[ -n "$BACKENDS" ]]; then
