@@ -57,7 +57,7 @@ done
 conda list
 
 cat environment.yml
-mamba env update -n base --file=environment.yml -vvv
+mamba env update -n base --file=environment.yml -v
 python -m pip install -e .
 
 if [[ -n "$BACKENDS" ]]; then
